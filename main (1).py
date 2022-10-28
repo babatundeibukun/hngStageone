@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config['JSON_SORT_KEYS']= False
 data = {
   "slackUsername": "officialibk", "backend": True, "age": 26,
